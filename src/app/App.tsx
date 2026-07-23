@@ -211,7 +211,7 @@ export default function App() {
         )}
       </nav>
 
-      <main className="mx-auto max-w-7xl px-6 py-8 lg:px-10 lg:py-10">
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
         <section id="overview" className="relative overflow-hidden rounded-[2.8rem] border border-[#dce9f5] bg-[#071118] shadow-[0_30px_100px_rgba(0,74,143,0.10)]">
           <div className="absolute inset-0">
             <img
@@ -238,19 +238,19 @@ export default function App() {
             />
           </div>
 
-          <div className="relative z-10 flex min-h-[800px] items-end px-8 py-14 lg:px-12 lg:py-16">
+          <div className="relative z-10 flex min-h-[480px] items-end px-4 py-8 sm:px-6 sm:py-10 md:min-h-[600px] md:py-12 lg:min-h-[800px] lg:px-12 lg:py-16">
             <div className="max-w-[640px]">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#8edbff] backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#8edbff] backdrop-blur-md sm:text-[0.7rem] sm:tracking-[0.32em]">
                 <Zap size={12} /> Energy digital transformation
               </div>
-              <h1 className="mt-7 text-4xl font-black leading-[0.9] text-white sm:text-5xl lg:text-6xl" style={{ fontFamily: "Barlow, sans-serif" }}>
+              <h1 className="mt-4 text-2xl font-black leading-[0.95] text-white sm:mt-6 sm:text-3xl md:text-4xl lg:text-6xl" style={{ fontFamily: "Barlow, sans-serif" }}>
                 Engineering the intelligent energy economy.
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
+              <p className="mt-4 max-w-xl text-sm leading-7 text-white/80 sm:mt-5 sm:text-base md:text-lg md:leading-8">
                 VinBytes helps energy organizations modernize critical infrastructure with digital engineering, industrial AI, and enterprise-grade transformation.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#landscape" className="group inline-flex items-center gap-2 rounded-full bg-[#0072BC] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+              <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
+                <a href="#landscape" className="group inline-flex items-center gap-2 rounded-full bg-[#0072BC] px-5 py-2.5 text-xs font-semibold text-white transition hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-sm">
                   Explore the vision
                   <ArrowRight size={15} className="transition group-hover:translate-x-0.5" />
                 </a>
@@ -258,39 +258,39 @@ export default function App() {
             </div>
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-[linear-gradient(90deg,_rgba(3,10,18,0.78)_0%,_rgba(3,10,18,0.28)_100%)] px-8 py-5 lg:px-12">
-            <div className="flex flex-wrap items-center gap-4 text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-white/72">
+          <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-[linear-gradient(90deg,_rgba(3,10,18,0.78)_0%,_rgba(3,10,18,0.28)_100%)] px-4 py-4 sm:px-6 sm:py-5 lg:px-12">
+            <div className="flex flex-wrap items-center gap-2 text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-white/72 sm:gap-4 sm:text-[0.72rem] sm:tracking-[0.3em]">
               <span>ISO 27001</span>
               <span className="h-1 w-1 rounded-full bg-white/35" />
               <span>Mission-critical systems</span>
-              <span className="h-1 w-1 rounded-full bg-white/35" />
-              <span>Engineering-led delivery</span>
-              <span className="h-1 w-1 rounded-full bg-white/35" />
-              <span>Enterprise-grade security</span>
+              <span className="hidden h-1 w-1 rounded-full bg-white/35 sm:inline" />
+              <span className="hidden sm:inline">Engineering-led delivery</span>
+              <span className="hidden h-1 w-1 rounded-full bg-white/35 sm:inline" />
+              <span className="hidden sm:inline">Enterprise-grade security</span>
             </div>
           </div>
         </section>
 
-        <section className="mt-8 rounded-[2rem] border border-[#dce9f5] bg-white/80 p-6 shadow-[0_16px_50px_rgba(0,74,143,0.06)] lg:p-8">
-          <div className="flex flex-wrap gap-3">
+        <section className="mt-6 rounded-[2rem] border border-[#dce9f5] bg-white/80 p-4 shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:mt-8 sm:p-6 lg:p-8">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {trustSignals.map((signal) => (
-              <div key={signal.label} className="rounded-full border border-[#dce9f5] bg-[#f7fbff] px-4 py-2 text-sm font-medium text-[#004A8F]">
+              <div key={signal.label} className="rounded-full border border-[#dce9f5] bg-[#f7fbff] px-3 py-2 text-xs font-medium text-[#004A8F] sm:px-4 sm:text-sm">
                 <span className="font-semibold text-[#0072BC]">{signal.label}</span> · {signal.detail}
               </div>
             ))}
           </div>
         </section>
 
-        <section id="landscape" className="mt-24">
-          <div className="mb-8 max-w-3xl">
+        <section id="landscape" className="mt-16 sm:mt-20 md:mt-24">
+          <div className="mb-6 max-w-3xl sm:mb-8">
             <SectionTag label="The energy landscape" />
-            <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">Energy is changing, and every sector is becoming part of a larger intelligent system.</h2>
-            <p className="mt-5 text-lg leading-8 text-[#4b627b]">
+            <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">Energy is changing, and every sector is becoming part of a larger intelligent system.</h2>
+            <p className="mt-3 text-sm leading-7 text-[#4b627b] sm:mt-4 sm:text-base md:text-lg md:leading-8">
               Instead of explaining each market in isolation, we present the story as a living ecosystem that blends from one domain to the next.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-5 md:space-y-6">
             {landscapeScenes.map((scene, index) => (
               <motion.article
                 key={scene.title}
@@ -299,17 +299,17 @@ export default function App() {
                 viewport={{ once: true, amount: 0.2, margin: "-80px" }}
                 transition={{ duration: 0.95, delay: index * 0.06, ease: revealEasing }}
                 whileHover={{ y: -8, scale: 1.008, boxShadow: "0 24px 70px rgba(0,74,143,0.12)" }}
-                className="overflow-hidden rounded-[2.2rem] border border-[#dce9f5] bg-white shadow-[0_16px_50px_rgba(0,74,143,0.06)]"
+                className="overflow-hidden rounded-[1.5rem] border border-[#dce9f5] bg-white shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:rounded-[2rem] lg:rounded-[2.2rem]"
               >
                 <div className="grid gap-0 lg:grid-cols-[1.02fr_0.98fr]">
-                  <div className="relative min-h-[320px] overflow-hidden lg:min-h-[420px]">
+                  <div className="relative min-h-[240px] overflow-hidden sm:min-h-[280px] md:min-h-[320px] lg:min-h-[420px]">
                     <img src={scene.image} alt={scene.title} className="absolute inset-0 h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-[linear-gradient(95deg,_rgba(2,10,18,0.82)_0%,_rgba(2,10,18,0.24)_100%)]" />
                   </div>
-                  <div className="flex flex-col justify-center bg-[linear-gradient(140deg,_#f8fbff_0%,_#ffffff_100%)] p-8 lg:p-10">
-                    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0072BC]">{scene.eyebrow}</p>
-                    <h3 className="mt-4 text-2xl font-semibold text-[#08152A] sm:text-3xl">{scene.title}</h3>
-                    <p className="mt-5 text-lg leading-8 text-[#4b627b]">{scene.copy}</p>
+                  <div className="flex flex-col justify-center bg-[linear-gradient(140deg,_#f8fbff_0%,_#ffffff_100%)] p-5 sm:p-6 md:p-7 lg:p-10">
+                    <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#0072BC] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">{scene.eyebrow}</p>
+                    <h3 className="mt-2 text-lg font-semibold text-[#08152A] sm:mt-3 sm:text-xl md:text-2xl lg:text-3xl">{scene.title}</h3>
+                    <p className="mt-3 text-xs leading-6 text-[#4b627b] sm:mt-4 sm:text-sm md:text-base md:leading-7 lg:text-lg lg:leading-8">{scene.copy}</p>
                   </div>
                 </div>
               </motion.article>
@@ -317,24 +317,24 @@ export default function App() {
           </div>
         </section>
 
-        <section id="challenge" className="mt-24 rounded-[2.4rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f7fbff_0%,_#ffffff_100%)] p-8 shadow-[0_20px_80px_rgba(0,74,143,0.06)] lg:p-10">
-          <div className="mb-8 max-w-3xl">
+        <section id="challenge" className="mt-16 rounded-[1.5rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f7fbff_0%,_#ffffff_100%)] p-5 shadow-[0_20px_80px_rgba(0,74,143,0.06)] sm:mt-20 sm:rounded-[2rem] sm:p-6 md:mt-24 md:rounded-[2.4rem] md:p-8 lg:p-10">
+          <div className="mb-6 max-w-3xl sm:mb-7 md:mb-8">
             <SectionTag label="Why transformation matters" />
-            <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">The challenge is no longer whether energy can evolve. It is whether operations can adapt with it.</h2>
+            <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">The challenge is no longer whether energy can evolve. It is whether operations can adapt with it.</h2>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid gap-4 sm:gap-5 md:gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: revealEasing }}
               whileHover={{ y: -6, scale: 1.005 }}
-              className="rounded-[2rem] border border-[#dce9f5] bg-[#06121e] p-8 text-white"
+              className="rounded-[1.2rem] border border-[#dce9f5] bg-[#06121e] p-5 text-white sm:rounded-[1.5rem] sm:p-6 md:rounded-[2rem] md:p-8"
             >
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#8edbff]">Before</p>
-              <p className="mt-4 text-3xl font-semibold">Fragmented visibility. Slower response. More risk.</p>
-              <div className="mt-8 space-y-3">
+              <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#8edbff] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Before</p>
+              <p className="mt-3 text-lg font-semibold md:mt-4 md:text-2xl lg:text-3xl">Fragmented visibility. Slower response. More risk.</p>
+              <div className="mt-5 space-y-2 md:mt-8 md:space-y-3">
                 {transformationPairs.map((pair, index) => (
                   <motion.div
                     key={pair.before}
@@ -342,7 +342,7 @@ export default function App() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.65, delay: index * 0.08, ease: revealEasing }}
-                    className="rounded-[1.2rem] border border-white/10 bg-white/10 px-4 py-3 text-sm text-white/80"
+                    className="rounded-[0.8rem] border border-white/10 bg-white/10 px-3 py-2 text-xs text-white/80 sm:rounded-[1rem] sm:px-4 sm:py-3 sm:text-sm md:rounded-[1.2rem] md:text-sm"
                   >
                     {pair.before}
                   </motion.div>
@@ -356,11 +356,11 @@ export default function App() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.95, delay: 0.08, ease: revealEasing }}
               whileHover={{ y: -6, scale: 1.005 }}
-              className="rounded-[2rem] border border-[#dce9f5] bg-white p-8"
+              className="rounded-[1.2rem] border border-[#dce9f5] bg-white p-5 sm:rounded-[1.5rem] sm:p-6 md:rounded-[2rem] md:p-8"
             >
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0072BC]">After</p>
-              <p className="mt-4 text-3xl font-semibold text-[#08152A]">Unified intelligence. Faster action. Stronger resilience.</p>
-              <div className="mt-8 grid gap-4 lg:grid-cols-2">
+              <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#0072BC] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">After</p>
+              <p className="mt-3 text-lg font-semibold text-[#08152A] md:mt-4 md:text-2xl lg:text-3xl">Unified intelligence. Faster action. Stronger resilience.</p>
+              <div className="mt-5 grid gap-3 md:mt-8 md:gap-4 lg:grid-cols-2">
                 {transformationPairs.map((pair, index) => (
                   <motion.div
                     key={pair.after}
@@ -368,10 +368,10 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.7, delay: 0.1 + index * 0.08, ease: revealEasing }}
-                    className="rounded-[1.3rem] border border-[#dce9f5] bg-[#f7fbff] p-5"
+                    className="rounded-[0.8rem] border border-[#dce9f5] bg-[#f7fbff] p-3 sm:rounded-[1rem] sm:p-4 md:rounded-[1.3rem] md:p-5"
                   >
-                    <p className="text-sm font-semibold text-[#004A8F]">{pair.after}</p>
-                    <p className="mt-2 text-sm leading-7 text-[#4b627b]">A shift from isolated systems to connected, adaptive operations.</p>
+                    <p className="text-xs font-semibold text-[#004A8F] sm:text-sm">{pair.after}</p>
+                    <p className="mt-1 text-xs leading-6 text-[#4b627b] sm:mt-2 sm:text-xs md:text-sm md:leading-7">A shift from isolated systems to connected, adaptive operations.</p>
                   </motion.div>
                 ))}
               </div>
@@ -379,17 +379,17 @@ export default function App() {
           </div>
         </section>
 
-        <section id="why-now" className="mt-24 overflow-hidden rounded-[2.4rem] border border-[#dce9f5] bg-[#06121e] p-8 text-white shadow-[0_20px_80px_rgba(0,74,143,0.06)] lg:p-10">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <section id="why-now" className="mt-16 overflow-hidden rounded-[1.5rem] border border-[#dce9f5] bg-[#06121e] p-5 text-white shadow-[0_20px_80px_rgba(0,74,143,0.06)] sm:mt-20 sm:rounded-[2rem] sm:p-6 md:mt-24 md:rounded-[2.4rem] md:p-8 lg:p-10">
+          <div className="grid gap-6 sm:gap-7 md:gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="max-w-2xl">
               <SectionTag label="Why now" />
-              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">The energy transition is accelerating, and the pressure to act is now visible across every part of the system.</h2>
-              <p className="mt-5 text-lg leading-8 text-white/70">
+              <h2 className="mt-2 text-xl font-semibold sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">The energy transition is accelerating, and the pressure to act is now visible across every part of the system.</h2>
+              <p className="mt-3 text-sm leading-7 text-white/70 sm:mt-4 sm:text-base md:text-lg md:leading-8">
                 The challenge is no longer whether change will happen. It is whether infrastructure, operations, and intelligence can evolve together.
               </p>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid gap-3 sm:gap-4 md:gap-4 lg:grid-cols-2">
               {whyNowSignals.map((signal, index) => (
                 <motion.div
                   key={signal.title}
@@ -398,26 +398,26 @@ export default function App() {
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.75, delay: index * 0.08, ease: revealEasing }}
                   whileHover={{ y: -6, scale: 1.01 }}
-                  className="rounded-[1.4rem] border border-white/10 bg-white/10 p-6 backdrop-blur"
+                  className="rounded-[1rem] border border-white/10 bg-white/10 p-4 backdrop-blur sm:rounded-[1.2rem] sm:p-5 md:rounded-[1.4rem] md:p-6"
                 >
-                  <p className="text-xl font-semibold">{signal.title}</p>
-                  <p className="mt-3 text-base leading-8 text-white/70">{signal.text}</p>
+                  <p className="text-base font-semibold sm:text-lg md:text-xl">{signal.title}</p>
+                  <p className="mt-2 text-xs leading-6 text-white/70 sm:mt-3 sm:text-sm md:text-base md:leading-8">{signal.text}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="thinking" className="mt-24 rounded-[2.4rem] border border-[#dce9f5] bg-[#06121e] p-8 text-white shadow-[0_20px_80px_rgba(0,74,143,0.08)] lg:p-10">
+        <section id="thinking" className="mt-16 rounded-[1.5rem] border border-[#dce9f5] bg-[#06121e] p-5 text-white shadow-[0_20px_80px_rgba(0,74,143,0.08)] sm:mt-20 sm:rounded-[2rem] sm:p-6 md:mt-24 md:rounded-[2.4rem] md:p-8 lg:p-10">
           <div className="max-w-3xl">
             <SectionTag label="Our thinking" />
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">We do not sell generic AI. We build industrial intelligence for the systems that cannot fail.</h2>
-            <p className="mt-5 text-lg leading-8 text-white/70">
+            <h2 className="mt-2 text-xl font-semibold sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">We do not sell generic AI. We build industrial intelligence for the systems that cannot fail.</h2>
+            <p className="mt-3 text-sm leading-7 text-white/70 sm:mt-4 sm:text-base md:text-lg md:leading-8">
               The idea is simple: engineering discipline first, technological ambition second, and operational trust always in view.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:mt-7 sm:gap-5 md:mt-8 md:gap-6 lg:grid-cols-3">
             {philosophyPoints.map((point, index) => (
               <motion.div
                 key={point.title}
@@ -426,22 +426,23 @@ export default function App() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: index * 0.08, ease: revealEasing }}
                 whileHover={{ y: -8, scale: 1.01 }}
-                className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 backdrop-blur"
+                className="rounded-[1rem] border border-white/10 bg-white/10 p-4 backdrop-blur sm:rounded-[1.2rem] sm:p-5 md:rounded-[1.5rem] md:p-6"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0072BC]/20 text-[#8edbff]">
-                  <Cpu size={18} />
+                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#0072BC]/20 text-[#8edbff] sm:h-10 sm:w-10 md:h-11 md:w-11">
+                  <Cpu size={16} className="sm:hidden" />
+                  <Cpu size={18} className="hidden sm:block" />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold">{point.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/70">{point.text}</p>
+                <h3 className="mt-3 text-base font-semibold sm:mt-4 sm:text-lg md:text-xl">{point.title}</h3>
+                <p className="mt-2 text-xs leading-6 text-white/70 sm:mt-3 sm:text-sm md:leading-7">{point.text}</p>
               </motion.div>
             ))}
           </div>
         </section>
 
-        <section id="ecosystem" className="mt-24">
-          <div className="mb-8 max-w-3xl">
+        <section id="ecosystem" className="mt-16 sm:mt-20 md:mt-24">
+          <div className="mb-6 max-w-3xl sm:mb-7 md:mb-8">
             <SectionTag label="The energy ecosystem" />
-            <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">One connected energy system, not a collection of isolated verticals.</h2>
+            <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">One connected energy system, not a collection of isolated verticals.</h2>
           </div>
 
           <motion.div
@@ -449,27 +450,28 @@ export default function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 1, ease: revealEasing }}
-            className="rounded-[2.4rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f8fbff_0%,_#ffffff_100%)] p-6 shadow-[0_16px_50px_rgba(0,74,143,0.06)] lg:p-8"
+            className="rounded-[1.5rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f8fbff_0%,_#ffffff_100%)] p-4 shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:rounded-[2rem] sm:p-6 md:rounded-[2.4rem] md:p-8 lg:p-8"
           >
-            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-[0.95fr_1.05fr]">
               <motion.div
                 initial={{ opacity: 0, x: -18 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.95, ease: revealEasing }}
-                className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-[#dce9f5] bg-[radial-gradient(circle_at_center,_rgba(0,114,188,0.14),_transparent_46%),linear-gradient(135deg,_#f7fbff_0%,_#eef7ff_100%)] p-6"
+                className="relative min-h-[240px] overflow-hidden rounded-[1.2rem] border border-[#dce9f5] bg-[radial-gradient(circle_at_center,_rgba(0,114,188,0.14),_transparent_46%),linear-gradient(135deg,_#f7fbff_0%,_#eef7ff_100%)] p-4 sm:min-h-[340px] sm:rounded-[1.5rem] sm:p-5 md:min-h-[420px] md:rounded-[2rem] md:p-6"
               >
                 <motion.div animate={{ opacity: [0.35, 0.8, 0.35] }} transition={{ duration: 6, repeat: Infinity }} className="absolute left-[10%] top-[20%] h-[4px] w-[76%] rounded-full bg-gradient-to-r from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
                 <motion.div animate={{ opacity: [0.25, 0.6, 0.25] }} transition={{ duration: 5.5, repeat: Infinity }} className="absolute left-[18%] top-[33%] h-[44%] w-[4px] rounded-full bg-gradient-to-b from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
                 <motion.div animate={{ opacity: [0.25, 0.6, 0.25] }} transition={{ duration: 6.5, repeat: Infinity }} className="absolute right-[18%] top-[28%] h-[52%] w-[4px] rounded-full bg-gradient-to-b from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
                 <motion.div animate={{ opacity: [0.3, 0.7, 0.3] }} transition={{ duration: 6.2, repeat: Infinity }} className="absolute bottom-[16%] left-[18%] h-[4px] w-[60%] rounded-full bg-gradient-to-r from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="rounded-full border border-[#0072BC]/20 bg-white/70 px-6 py-4 text-center shadow-[0_20px_60px_rgba(0,74,143,0.08)]">
-                    <div className="flex items-center justify-center gap-2 text-[#0072BC]">
-                      <Network size={18} />
-                      <span className="text-sm font-semibold uppercase tracking-[0.24em]">Energy flow</span>
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                  <div className="rounded-full border border-[#0072BC]/20 bg-white/70 px-4 py-3 text-center shadow-[0_20px_60px_rgba(0,74,143,0.08)] sm:px-5 sm:py-4">
+                    <div className="flex items-center justify-center gap-1 text-[#0072BC] sm:gap-2">
+                      <Network size={14} className="sm:hidden" />
+                      <Network size={18} className="hidden sm:block" />
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.24em]">Energy flow</span>
                     </div>
-                    <p className="mt-2 text-xl font-semibold text-[#08152A]">From generation to consumption, one living system.</p>
+                    <p className="mt-1 text-sm font-semibold text-[#08152A] sm:mt-2 sm:text-lg md:text-xl">From generation to consumption, one living system.</p>
                   </div>
                 </div>
                 {ecosystemNodes.map((node) => (
@@ -477,7 +479,7 @@ export default function App() {
                     key={node.id}
                     onMouseEnter={() => setActiveEcosystemNode(node.id)}
                     onFocus={() => setActiveEcosystemNode(node.id)}
-                    className={`absolute rounded-full border px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] transition ${
+                    className={`absolute hidden rounded-full border px-2 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] transition md:block ${
                       activeEcosystemNode === node.id
                         ? "border-[#0072BC] bg-[#0072BC] text-white shadow-lg shadow-[#0072BC]/20"
                         : "border-[#dce9f5] bg-white/80 text-[#004A8F]"
@@ -499,15 +501,17 @@ export default function App() {
                 transition={{ duration: 0.95, delay: 0.08, ease: revealEasing }}
                 className="rounded-[2rem] border border-[#dce9f5] bg-white p-8"
               >
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0072BC]">Active layer</p>
-                <h3 className="mt-4 text-2xl font-semibold text-[#08152A]">{activeNode.label}</h3>
-                <p className="mt-5 text-lg leading-8 text-[#4b627b]">{activeNode.description}</p>
-                <div className="mt-8 rounded-[1.5rem] border border-[#dce9f5] bg-[#f7fbff] p-6">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-2xl bg-[#0072BC]/10 p-3 text-[#0072BC]">
-                      <Globe2 size={18} />
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#0072BC] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Active layer</p>
+                <h3 className="mt-3 text-lg font-semibold text-[#08152A] sm:mt-4 sm:text-xl md:mt-5 md:text-2xl">{activeNode.label}</h3>
+                <p className="mt-3 text-xs leading-6 text-[#4b627b] sm:mt-4 sm:text-sm md:mt-5 md:text-base md:leading-8">{activeNode.description}</p>
+                <div className="mt-5 rounded-[1rem] border border-[#dce9f5] bg-[#f7fbff] p-4 sm:mt-6 sm:rounded-[1.3rem] sm:p-5 md:mt-8 md:rounded-[1.5rem] md:p-6">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="rounded-2xl bg-[#0072BC]/10 p-2 text-[#0072BC] sm:p-2.5 md:p-3">
+                      <Globe2 size={14} className="sm:hidden" />
+                      <Globe2 size={16} className="hidden sm:block md:hidden" />
+                      <Globe2 size={18} className="hidden md:block" />
                     </div>
-                    <p className="text-sm font-semibold text-[#004A8F]">The network lights up as the story moves from extraction to consumption, reinforcing VinBytes’ role as the connective layer.</p>
+                    <p className="text-xs font-semibold text-[#004A8F] sm:text-sm md:text-sm">The network lights up as the story moves from extraction to consumption, reinforcing VinBytes' role as the connective layer.</p>
                   </div>
                 </div>
               </motion.div>
@@ -515,14 +519,14 @@ export default function App() {
           </motion.div>
         </section>
 
-        <section id="journey" className="mt-24 rounded-[2.4rem] border border-[#dce9f5] bg-[linear-gradient(140deg,_#f8fbff_0%,_#ffffff_100%)] p-8 shadow-[0_16px_50px_rgba(0,74,143,0.06)] lg:p-10">
-          <div className="mb-8 max-w-3xl">
+        <section id="journey" className="mt-16 rounded-[1.5rem] border border-[#dce9f5] bg-[linear-gradient(140deg,_#f8fbff_0%,_#ffffff_100%)] p-5 shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:mt-20 sm:rounded-[2rem] sm:p-6 md:mt-24 md:rounded-[2.4rem] md:p-8 lg:p-10">
+          <div className="mb-6 max-w-3xl sm:mb-7 md:mb-8">
             <SectionTag label="Digital transformation journey" />
-            <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">A visual story from infrastructure to intelligent decision-making.</h2>
+            <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">A visual story from infrastructure to intelligent decision-making.</h2>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="space-y-3">
+          <div className="grid gap-4 sm:gap-5 md:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="space-y-2 sm:space-y-3 md:space-y-3">
               {journeySteps.map((step, index) => (
                 <motion.button
                   key={step.title}
@@ -554,23 +558,23 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: revealEasing }}
               whileHover={{ y: -6, scale: 1.005 }}
-              className="relative overflow-hidden rounded-[2rem] border border-[#dce9f5] bg-[#06121e]"
+              className="relative overflow-hidden rounded-[1.2rem] border border-[#dce9f5] bg-[#06121e] sm:rounded-[1.5rem] md:rounded-[2rem]"
             >
               <img src={journeyVisuals[activeJourneyStep]} alt={journeySteps[activeJourneyStep].title} className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(3,10,18,0.92)_0%,_rgba(3,10,18,0.34)_100%)]" />
-              <div className="relative z-10 flex min-h-[420px] flex-col justify-end p-8 lg:p-10">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#8edbff]">Live transformation</p>
-                <h3 className="mt-4 text-3xl font-semibold text-white">{journeySteps[activeJourneyStep].title}</h3>
-                <p className="mt-4 max-w-xl text-lg leading-8 text-white/75">{journeySteps[activeJourneyStep].text}</p>
+              <div className="relative z-10 flex min-h-[240px] flex-col justify-end p-4 sm:min-h-[300px] sm:p-6 md:min-h-[420px] md:p-8 lg:p-10">
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#8edbff] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Live transformation</p>
+                <h3 className="mt-2 text-lg font-semibold text-white sm:mt-3 sm:text-xl md:mt-4 md:text-3xl">{journeySteps[activeJourneyStep].title}</h3>
+                <p className="mt-2 max-w-xl text-xs leading-6 text-white/75 sm:mt-3 sm:text-sm md:mt-4 md:text-lg md:leading-8">{journeySteps[activeJourneyStep].text}</p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        <section id="why" className="mt-24">
-          <div className="mb-8 max-w-3xl">
+        <section id="why" className="mt-16 sm:mt-20 md:mt-24">
+          <div className="mb-6 max-w-3xl sm:mb-7 md:mb-8">
             <SectionTag label="Why VinBytes" />
-            <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">Not just a platform. A long-term operating partner for the energy economy.</h2>
+            <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">Not just a platform. A long-term operating partner for the energy economy.</h2>
           </div>
 
           <motion.div
@@ -578,22 +582,22 @@ export default function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.9, ease: revealEasing }}
-            className="overflow-hidden rounded-[2.4rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f8fbff_0%,_#ffffff_100%)] p-6 shadow-[0_16px_50px_rgba(0,74,143,0.06)] lg:p-8"
+            className="overflow-hidden rounded-[1.5rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f8fbff_0%,_#ffffff_100%)] p-4 shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:rounded-[2rem] sm:p-6 md:rounded-[2.4rem] md:p-8 lg:p-8"
           >
-            <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="grid gap-4 sm:gap-6 md:gap-6 lg:grid-cols-[1.05fr_0.95fr]">
               <motion.div
                 initial={{ opacity: 0, x: -18 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.9, ease: revealEasing }}
-                className="rounded-[2rem] border border-[#dce9f5] bg-[#06121e] p-8 text-white"
+                className="rounded-[1.2rem] border border-[#dce9f5] bg-[#06121e] p-4 text-white sm:rounded-[1.5rem] sm:p-6 md:rounded-[2rem] md:p-8"
               >
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#8edbff]">Built for infrastructure that cannot fail</p>
-                <h3 className="mt-5 text-3xl font-semibold sm:text-4xl">We build the operating intelligence that keeps critical systems steady even under pressure.</h3>
-                <p className="mt-5 text-lg leading-8 text-white/70">VinBytes combines engineering rigor, operational discipline, and digital sophistication into a single trusted layer for modern energy organizations.</p>
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#8edbff] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Built for infrastructure that cannot fail</p>
+                <h3 className="mt-3 text-lg font-semibold sm:mt-4 sm:text-xl md:mt-5 md:text-3xl lg:text-4xl">We build the operating intelligence that keeps critical systems steady even under pressure.</h3>
+                <p className="mt-3 text-xs leading-6 text-white/70 sm:mt-4 sm:text-sm md:mt-5 md:text-lg md:leading-8">VinBytes combines engineering rigor, operational discipline, and digital sophistication into a single trusted layer for modern energy organizations.</p>
               </motion.div>
 
-              <div className="grid gap-4">
+              <div className="grid gap-3 sm:gap-4 md:gap-4">
                 {whyBlocks.map((block, index) => (
                   <motion.article
                     key={block.title}
@@ -602,13 +606,14 @@ export default function App() {
                     viewport={{ once: true, margin: "-70px" }}
                     transition={{ duration: 0.8, delay: index * 0.07, ease: revealEasing }}
                     whileHover={{ y: -6, scale: 1.006 }}
-                    className="rounded-[1.6rem] border border-[#dce9f5] bg-white p-6"
+                    className="rounded-[1rem] border border-[#dce9f5] bg-white p-4 sm:rounded-[1.2rem] sm:p-5 md:rounded-[1.6rem] md:p-6"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0072BC]/10 text-[#0072BC]">
-                      <Layers3 size={18} />
+                    <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#0072BC]/10 text-[#0072BC] sm:h-10 sm:w-10 md:h-11 md:w-11">
+                      <Layers3 size={16} className="sm:hidden" />
+                      <Layers3 size={18} className="hidden sm:block" />
                     </div>
-                    <h4 className="mt-5 text-xl font-semibold text-[#08152A]">{block.title}</h4>
-                    <p className="mt-3 text-base leading-8 text-[#4b627b]">{block.text}</p>
+                    <h4 className="mt-3 text-sm font-semibold text-[#08152A] sm:mt-4 sm:text-base md:text-xl">{block.title}</h4>
+                    <p className="mt-2 text-xs leading-6 text-[#4b627b] sm:mt-3 sm:text-sm md:leading-8">{block.text}</p>
                   </motion.article>
                 ))}
               </div>
@@ -616,8 +621,8 @@ export default function App() {
           </motion.div>
         </section>
 
-        <section id="trust" className="mt-24 rounded-[2.4rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#ffffff_0%,_#f6fbff_100%)] p-8 shadow-[0_20px_80px_rgba(0,74,143,0.08)] lg:p-10">
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <section id="trust" className="mt-16 rounded-[1.5rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#ffffff_0%,_#f6fbff_100%)] p-5 shadow-[0_20px_80px_rgba(0,74,143,0.08)] sm:mt-20 sm:rounded-[2rem] sm:p-6 md:mt-24 md:rounded-[2.4rem] md:p-8 lg:p-10">
+          <div className="grid gap-6 sm:gap-7 md:gap-8 lg:grid-cols-[1.05fr_0.95fr]">
             <motion.div
               initial={{ opacity: 0, x: -18 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -625,8 +630,8 @@ export default function App() {
               transition={{ duration: 0.9, ease: revealEasing }}
             >
               <SectionTag label="Enterprise trust" />
-              <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">The confidence layer behind every transformation decision.</h2>
-              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4b627b]">
+              <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">The confidence layer behind every transformation decision.</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#4b627b] sm:mt-4 sm:text-base md:text-lg md:leading-8">
                 Security, compliance, reliability, and engineering maturity are not side notes. They are the foundation of lasting transformation.
               </p>
             </motion.div>
@@ -637,28 +642,30 @@ export default function App() {
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.95, delay: 0.08, ease: revealEasing }}
               whileHover={{ y: -6, scale: 1.005 }}
-              className="rounded-[2rem] border border-[#dce9f5] bg-white p-8"
+              className="rounded-[1.2rem] border border-[#dce9f5] bg-white p-4 sm:rounded-[1.5rem] sm:p-5 md:rounded-[2rem] md:p-8"
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0072BC]/10 text-[#0072BC]">
-                  <Shield size={20} />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0072BC]/10 text-[#0072BC] sm:h-11 sm:w-11 md:h-12 md:w-12">
+                  <Shield size={16} className="sm:hidden" />
+                  <Shield size={18} className="hidden sm:block md:hidden" />
+                  <Shield size={20} className="hidden md:block" />
                 </div>
                 <div>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#004A8F]">Enterprise foundations</p>
-                  <p className="text-xl font-semibold text-[#08152A]">Built for mission-critical delivery</p>
+                  <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#004A8F] sm:text-[0.65rem] sm:tracking-[0.28em]">Enterprise foundations</p>
+                  <p className="text-sm font-semibold text-[#08152A] sm:text-base md:text-xl">Built for mission-critical delivery</p>
                 </div>
               </div>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="mt-6 grid gap-3 sm:gap-4 sm:grid-cols-3 md:mt-8">
                 {trustStats.map((stat) => (
-                  <div key={stat.label} className="rounded-[1.2rem] border border-[#dce9f5] bg-[#f7fbff] p-4">
-                    <p className="text-2xl font-semibold text-[#08152A]">{stat.value}</p>
-                    <p className="mt-2 text-sm leading-7 text-[#4b627b]">{stat.label}</p>
+                  <div key={stat.label} className="rounded-[1rem] border border-[#dce9f5] bg-[#f7fbff] p-3 sm:rounded-[1.2rem] sm:p-4">
+                    <p className="text-lg font-semibold text-[#08152A] sm:text-2xl">{stat.value}</p>
+                    <p className="mt-1 text-xs leading-6 text-[#4b627b] sm:mt-2 sm:text-xs md:text-sm">{stat.label}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-2 sm:gap-3 md:mt-8">
                 {[
                   "ISO 9001",
                   "ISO 27001",
@@ -673,9 +680,10 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.65, delay: index * 0.04, ease: revealEasing }}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#dce9f5] bg-[#f7fbff] px-4 py-2 text-sm font-medium text-[#004A8F]"
+                    className="inline-flex items-center gap-1 rounded-full border border-[#dce9f5] bg-[#f7fbff] px-3 py-1.5 text-xs font-medium text-[#004A8F] sm:px-4 sm:py-2 sm:text-sm"
                   >
-                    <BadgeCheck size={14} /> {item}
+                    <BadgeCheck size={12} className="sm:hidden" />
+                    <BadgeCheck size={14} className="hidden sm:block" /> {item}
                   </motion.div>
                 ))}
               </div>
@@ -683,20 +691,20 @@ export default function App() {
           </div>
         </section>
 
-        <section id="insights" className="mt-24">
-          <div className="mb-8 max-w-3xl">
+        <section id="insights" className="mt-16 sm:mt-20 md:mt-24">
+          <div className="mb-6 max-w-3xl sm:mb-7 md:mb-8">
             <SectionTag label="Insights" />
-            <h2 className="mt-3 text-3xl font-semibold text-[#08152A] sm:text-4xl">Premium editorial thinking for the next era of energy.</h2>
+            <h2 className="mt-2 text-xl font-semibold text-[#08152A] sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">Premium editorial thinking for the next era of energy.</h2>
           </div>
 
-          <div className="rounded-[2.4rem] border border-[#dce9f5] bg-white p-6 shadow-[0_16px_50px_rgba(0,74,143,0.06)] lg:p-8">
+          <div className="rounded-[1.5rem] border border-[#dce9f5] bg-white p-5 shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:rounded-[2rem] sm:p-6 md:rounded-[2.4rem] md:p-8 lg:p-8">
             <motion.article
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-70px" }}
               transition={{ duration: 0.95, ease: revealEasing }}
               whileHover={{ y: -6, scale: 1.004 }}
-              className="relative overflow-hidden rounded-[2rem] border border-[#dce9f5] bg-[#06121e] p-8 text-white lg:p-10"
+              className="relative overflow-hidden rounded-[1.2rem] border border-[#dce9f5] bg-[#06121e] p-4 text-white sm:rounded-[1.5rem] sm:p-6 md:rounded-[2rem] md:p-8 lg:p-10"
             >
               <img
                 src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=2200&q=80"
@@ -705,16 +713,17 @@ export default function App() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(125deg,_rgba(3,10,18,0.96)_0%,_rgba(3,10,18,0.5)_45%,_rgba(0,114,188,0.24)_100%)]" />
               <div className="relative z-10 max-w-2xl">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#8edbff]">Featured story</p>
-                <h3 className="mt-4 text-3xl font-semibold sm:text-4xl">The future of AI in energy is not about automation alone. It is about orchestration.</h3>
-                <p className="mt-5 text-lg leading-8 text-white/75">Why industrial intelligence is becoming the operating layer of modern infrastructure, from utilities to large industrial networks.</p>
-                <a href="#partner" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white">
-                  Read the perspective <ArrowRight size={14} />
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#8edbff] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Featured story</p>
+                <h3 className="mt-2 text-lg font-semibold sm:mt-3 sm:text-xl md:mt-4 md:text-3xl lg:text-4xl">The future of AI in energy is not about automation alone. It is about orchestration.</h3>
+                <p className="mt-2 text-xs leading-6 text-white/75 sm:mt-3 sm:text-sm md:mt-4 md:text-lg md:leading-8">Why industrial intelligence is becoming the operating layer of modern infrastructure, from utilities to large industrial networks.</p>
+                <a href="#partner" className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-white sm:mt-4 md:text-sm">
+                  Read the perspective <ArrowRight size={12} className="sm:hidden" />
+                  <ArrowRight size={14} className="hidden sm:block" />
                 </a>
               </div>
             </motion.article>
 
-            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+            <div className="mt-5 grid gap-4 sm:mt-6 sm:gap-5 md:mt-6 md:gap-6 lg:grid-cols-2">
               {insightsItems.map((item, index) => (
                 <motion.article
                   key={item.title}
@@ -723,18 +732,18 @@ export default function App() {
                   viewport={{ once: true, margin: "-70px" }}
                   transition={{ duration: 0.75, delay: index * 0.08, ease: revealEasing }}
                   whileHover={{ y: -6, scale: 1.005 }}
-                  className="rounded-[1.8rem] border border-[#dce9f5] bg-[#f7fbff] p-8"
+                  className="rounded-[1.2rem] border border-[#dce9f5] bg-[#f7fbff] p-4 sm:rounded-[1.5rem] sm:p-6 md:rounded-[1.8rem] md:p-8"
                 >
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0072BC]">Editorial {index + 1}</p>
-                  <h4 className="mt-4 text-2xl font-semibold text-[#08152A]">{item.title}</h4>
-                  <p className="mt-4 text-lg leading-8 text-[#4b627b]">{item.text}</p>
+                  <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#0072BC] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Editorial {index + 1}</p>
+                  <h4 className="mt-2 text-base font-semibold text-[#08152A] sm:mt-3 sm:text-lg md:text-2xl">{item.title}</h4>
+                  <p className="mt-2 text-xs leading-6 text-[#4b627b] sm:mt-3 sm:text-sm md:mt-4 md:text-lg md:leading-8">{item.text}</p>
                 </motion.article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="partner" className="mt-24 rounded-[2.4rem] border border-[#dce9f5] bg-[#04101c] p-8 text-white shadow-[0_20px_80px_rgba(0,74,143,0.08)] lg:p-10">
+        <section id="partner" className="mt-16 rounded-[1.5rem] border border-[#dce9f5] bg-[#04101c] p-5 text-white shadow-[0_20px_80px_rgba(0,74,143,0.08)] sm:mt-20 sm:rounded-[2rem] sm:p-6 md:mt-24 md:rounded-[2.4rem] md:p-8 lg:p-10">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -742,17 +751,18 @@ export default function App() {
             transition={{ duration: 0.9, ease: revealEasing }}
             className="max-w-3xl"
           >
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#8edbff]">Partnership</p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">The next generation of energy will be defined by intelligence as much as infrastructure.</h2>
-            <p className="mt-5 text-lg leading-8 text-white/75">
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#8edbff] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Partnership</p>
+            <h2 className="mt-2 text-xl font-semibold sm:mt-3 sm:text-2xl md:text-3xl lg:text-4xl">The next generation of energy will be defined by intelligence as much as infrastructure.</h2>
+            <p className="mt-3 text-sm leading-7 text-white/75 sm:mt-4 sm:text-base md:text-lg md:leading-8">
               VinBytes is built for organizations that want to shape the next era of energy with clarity, confidence, and long-term operational depth.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#overview" className="inline-flex items-center gap-2 rounded-full bg-[#0072BC] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+            <div className="mt-4 flex flex-wrap gap-2 sm:mt-6 sm:gap-3 md:mt-8">
+              <a href="#overview" className="inline-flex items-center gap-2 rounded-full bg-[#0072BC] px-4 py-2 text-xs font-semibold text-white transition hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-sm">
                 Re-enter the vision
-                <ArrowRight size={15} />
+                <ArrowRight size={12} className="sm:hidden" />
+                <ArrowRight size={15} className="hidden sm:block" />
               </a>
-              <a href="mailto:hello@vinbytes.com" className="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-white/90 transition hover:-translate-y-0.5">
+              <a href="mailto:hello@vinbytes.com" className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90 transition hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-sm">
                 hello@vinbytes.com
               </a>
             </div>
