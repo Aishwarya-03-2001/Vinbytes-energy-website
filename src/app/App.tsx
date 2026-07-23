@@ -460,33 +460,43 @@ export default function App() {
                 transition={{ duration: 0.95, ease: revealEasing }}
                 className="relative min-h-[240px] overflow-hidden rounded-[1.2rem] border border-[#dce9f5] bg-[radial-gradient(circle_at_center,_rgba(0,114,188,0.14),_transparent_46%),linear-gradient(135deg,_#f7fbff_0%,_#eef7ff_100%)] p-4 sm:min-h-[340px] sm:rounded-[1.5rem] sm:p-5 md:min-h-[420px] md:rounded-[2rem] md:p-6"
               >
-                <motion.div animate={{ opacity: [0.35, 0.8, 0.35] }} transition={{ duration: 6, repeat: Infinity }} className="absolute left-[10%] top-[20%] h-[4px] w-[76%] rounded-full bg-gradient-to-r from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
-                <motion.div animate={{ opacity: [0.25, 0.6, 0.25] }} transition={{ duration: 5.5, repeat: Infinity }} className="absolute left-[18%] top-[33%] h-[44%] w-[4px] rounded-full bg-gradient-to-b from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
-                <motion.div animate={{ opacity: [0.25, 0.6, 0.25] }} transition={{ duration: 6.5, repeat: Infinity }} className="absolute right-[18%] top-[28%] h-[52%] w-[4px] rounded-full bg-gradient-to-b from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
-                <motion.div animate={{ opacity: [0.3, 0.7, 0.3] }} transition={{ duration: 6.2, repeat: Infinity }} className="absolute bottom-[16%] left-[18%] h-[4px] w-[60%] rounded-full bg-gradient-to-r from-[#0072BC]/10 via-[#0072BC] to-[#0072BC]/10" />
-                <div className="absolute inset-0 flex items-center justify-center px-2">
-                  <div className="rounded-full border border-[#0072BC]/20 bg-white/70 px-4 py-3 text-center shadow-[0_20px_60px_rgba(0,74,143,0.08)] sm:px-5 sm:py-4">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,_rgba(0,114,188,0.14),_transparent_56%)]" />
+                <motion.div animate={{ opacity: [0.35, 0.85, 0.35] }} transition={{ duration: 8, repeat: Infinity }} className="absolute left-[10%] top-[18%] h-[2px] w-[78%] rounded-full bg-gradient-to-r from-transparent via-[#0072BC]/70 to-transparent" />
+                <motion.div animate={{ opacity: [0.2, 0.6, 0.2] }} transition={{ duration: 6.5, repeat: Infinity }} className="absolute left-[24%] top-[26%] h-[44%] w-[2px] rounded-full bg-gradient-to-b from-[#0072BC]/20 via-[#0072BC]/70 to-transparent" />
+                <motion.div animate={{ opacity: [0.2, 0.6, 0.2] }} transition={{ duration: 7.2, repeat: Infinity }} className="absolute right-[24%] top-[24%] h-[52%] w-[2px] rounded-full bg-gradient-to-b from-[#0072BC]/20 via-[#0072BC]/70 to-transparent" />
+                <motion.div animate={{ opacity: [0.25, 0.7, 0.25] }} transition={{ duration: 7.8, repeat: Infinity }} className="absolute bottom-[18%] left-[16%] h-[2px] w-[66%] rounded-full bg-gradient-to-r from-transparent via-[#0072BC]/70 to-transparent" />
+
+                <div className="absolute inset-x-0 top-0 z-10 flex justify-center px-3 pt-3 sm:px-4 sm:pt-4">
+                  <div className="rounded-full border border-[#0072BC]/20 bg-white/80 px-3 py-2 text-center shadow-[0_12px_30px_rgba(0,74,143,0.08)] backdrop-blur sm:px-4 sm:py-3">
                     <div className="flex items-center justify-center gap-1 text-[#0072BC] sm:gap-2">
                       <Network size={14} className="sm:hidden" />
                       <Network size={18} className="hidden sm:block" />
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.24em]">Energy flow</span>
+                      <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.24em]">Energy flow</span>
                     </div>
-                    <p className="mt-1 text-sm font-semibold text-[#08152A] sm:mt-2 sm:text-lg md:text-xl">From generation to consumption, one living system.</p>
+                    <p className="mt-1 text-[0.72rem] font-semibold text-[#08152A] sm:mt-1.5 sm:text-sm md:text-base">From generation to consumption</p>
                   </div>
                 </div>
+
+                <div className="absolute inset-0 flex items-end justify-center px-2 pb-3 sm:pb-4 md:pb-6">
+                  <div className="w-full max-w-[280px] rounded-[1rem] border border-[#dce9f5] bg-white/70 px-3 py-2 text-center shadow-[0_12px_30px_rgba(0,74,143,0.06)] backdrop-blur sm:max-w-[320px] sm:px-4 sm:py-3">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#0072BC] sm:text-sm">Connected system</p>
+                    <p className="mt-1 text-[0.78rem] font-medium text-[#08152A] sm:text-sm">One living network spanning generation, transmission, and demand.</p>
+                  </div>
+                </div>
+
                 {ecosystemNodes.map((node) => (
                   <button
                     key={node.id}
                     onMouseEnter={() => setActiveEcosystemNode(node.id)}
                     onFocus={() => setActiveEcosystemNode(node.id)}
-                    className={`absolute hidden rounded-full border px-2 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] transition md:block ${
+                    className={`absolute hidden rounded-full border px-2 py-1.5 text-[0.6rem] font-semibold uppercase tracking-[0.16em] transition md:block ${
                       activeEcosystemNode === node.id
                         ? "border-[#0072BC] bg-[#0072BC] text-white shadow-lg shadow-[#0072BC]/20"
-                        : "border-[#dce9f5] bg-white/80 text-[#004A8F]"
+                        : "border-[#dce9f5] bg-white/85 text-[#004A8F]"
                     }`}
                     style={{
                       left: `${[10, 22, 72, 80, 18, 40, 60, 76][ecosystemNodes.findIndex((item) => item.id === node.id)]}%`,
-                      top: `${[20, 35, 18, 50, 70, 58, 32, 76][ecosystemNodes.findIndex((item) => item.id === node.id)]}%`,
+                      top: `${[24, 38, 24, 54, 72, 62, 38, 78][ecosystemNodes.findIndex((item) => item.id === node.id)]}%`,
                     }}
                   >
                     {node.label}
@@ -499,7 +509,7 @@ export default function App() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.95, delay: 0.08, ease: revealEasing }}
-                className="rounded-[2rem] border border-[#dce9f5] bg-white p-8"
+                className="rounded-[1.2rem] border border-[#dce9f5] bg-white p-4 sm:rounded-[1.5rem] sm:p-6 md:rounded-[2rem] md:p-8"
               >
                 <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-[#0072BC] sm:text-[0.65rem] sm:tracking-[0.28em] md:text-[0.7rem] md:tracking-[0.32em]">Active layer</p>
                 <h3 className="mt-3 text-lg font-semibold text-[#08152A] sm:mt-4 sm:text-xl md:mt-5 md:text-2xl">{activeNode.label}</h3>
