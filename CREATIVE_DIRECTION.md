@@ -14,6 +14,7 @@ The brand should communicate:
 
 
 
+
 The website must position VinBytes as a premium transformation partner for complex energy organizations—not as a startup offering generic AI features.
 
 ---
