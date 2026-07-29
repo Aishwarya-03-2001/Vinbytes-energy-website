@@ -12,6 +12,8 @@ The brand should communicate:
 - long-term partnership
 - mission-critical capability
 
+
+
 The website must position VinBytes as a premium transformation partner for complex energy organizations—not as a startup offering generic AI features.
 
 ---
