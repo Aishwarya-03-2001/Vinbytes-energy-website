@@ -593,7 +593,7 @@ export default function App() {
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.9, ease: revealEasing }}
             className="overflow-hidden rounded-[1.5rem] border border-[#dce9f5] bg-[linear-gradient(135deg,_#f8fbff_0%,_#ffffff_100%)] p-4 shadow-[0_16px_50px_rgba(0,74,143,0.06)] sm:rounded-[2rem] sm:p-6 md:rounded-[2.4rem] md:p-8 lg:p-8"
-          >   
+          >      
             <div className="grid gap-4 sm:gap-6 md:gap-6 lg:grid-cols-[1.05fr_0.95fr]">
               <motion.div
                 initial={{ opacity: 0, x: -18 }}
